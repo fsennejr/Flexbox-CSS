@@ -1,0 +1,57 @@
+.container {
+	background-color: black;
+	padding: 2rem;
+	margin:0 auto;
+	width: 1200px;
+	height: 600px;
+	/*flexbox*/
+	display: flex;
+	/*flex-direction: row | row-reverse | column | column-reverse*/
+	flex-direction: row ;
+	/*flex-wrap: nowrap | wrap;*/ /*encaixar todos os elementos na mesma linha*/
+	flex-wrap: nowrap;
+
+	/*flex-flow: abreviação do flex-direction e  flex-wrap*/
+
+	flex-flow:  nowrap row; /*agora eu poderia tirar os dois anteriores se quisesse*/
+
+	/*justify-content: flex-start | flex-end | center | space-between | space-around*/
+	justify-content: center; /*ele varia de acordo com o flex-direction*/
+	/*align-items: baseline; strech coloca a altura total para todos, não pode ter altura setada, mesma coisa para o baseline;*/
+	/*align-items: flex-start | flex-end | center | strech | baseline*/
+	align-items: center;
+}
+
+
+.item {
+	width: 200px;
+	height: 200px;
+	margin-right: 10px;
+	background-color: orange;
+	font-size: 1.5rem;
+	font-weight: bold;
+
+	/*flexbox*/
+
+	/*flex-grow:  trabalhando com as dimensões do elemento*/
+	flex-grow: 1;
+
+}
+
+
+/*order alterar a ordem dos elementos mas isso somente por pseudo elemento*/
+.item:nth-child(1){
+	order: 3;
+	flex-grow: 2;
+	align-self: flex-end;
+}
+
+.item:nth-child(2){
+	order: 2;
+}
+
+.item:nth-child(3){
+	order: 1;
+	align-self: flex-start;
+}
+
